@@ -1,0 +1,25 @@
+<div class="form-preview">
+  <h2>Form Preview</h2>
+  <form>
+    <div *ngFor="let field of formStructure" class="field">
+      <label>{{ field.label }}</label>
+      <ng-container [ngSwitch]="field.type">
+        <input *ngSwitchCase="'text'" type="text" />
+        <div *ngSwitchCase="'radio'">
+          <div *ngFor="let option of field.options">
+            <label>
+              <input type="radio" name="{{ field.label }}" /> {{ option }}
+            </label>
+          </div>
+        </div>
+        <div *ngSwitchCase="'checkbox'">
+          <div *ngFor="let option of field.options">
+            <label>
+              <input type="checkbox" /> {{ option }}
+            </label>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </form>
+</div>

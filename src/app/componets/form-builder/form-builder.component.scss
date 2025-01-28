@@ -1,0 +1,164 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the form builder */
+.form-builder-container {
+  width: 100%;
+  max-width: 600px; /* Restrict the form to a reasonable width on large screens */
+  margin: 0 auto;   /* Center the form on the page */
+  padding: 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Headings */
+.form-builder-container h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+/* Text Inputs, Select, etc. */
+.form-group input[type="text"],
+.form-group select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Field Container */
+.field-container {
+  border: 1px solid #e0e0e0;
+  background: #fafafa;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+/* Option Groups */
+.options-container {
+  margin-top: 1rem;
+  background: #fff;
+  border: 1px solid #ededed;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.options-container h4 {
+  margin-bottom: 0.5rem;
+}
+
+/* Single Option Row */
+.options-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Option Input */
+.options-group input[type='text'] {
+  flex: 1;
+  margin-right: 0.5rem;
+  height: 40px;
+}
+
+/* Remove Option Button */
+.delete-option {
+  background: #ff4d4d;
+  border: none;
+  color: #fff;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-option:hover {
+  background: #e60000;
+}
+
+/* Action Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+
+.add-option {
+  background: #007bff;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.add-option:hover {
+  background: #0056b3;
+}
+
+.delete-field {
+  background: #ff4d4d;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.delete-field:hover {
+  background: #e60000;
+}
+
+.add-field {
+  background: #28a745;
+  color: #fff;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+}
+
+.add-field:hover {
+  background: #218838;
+}
+
+.save-form {
+  background: #17a2b8;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.save-form:hover {
+  background: #117a8b;
+}
+
+/* Responsive Layout */
+
+/* Tablets and larger screens */
+@media (min-width: 600px) {
+  .options-group {
+    flex-direction: row;
+  }
+}
+
+/* Desktops and larger screens */
+@media (min-width: 992px) {
+  .form-builder-container {
+    max-width: 800px;
+  }
+}
